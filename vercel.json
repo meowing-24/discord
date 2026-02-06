@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "name": "discord-file-uploader",
+  "builds": [
+    {
+      "src": "api/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/upload",
+      "dest": "api/server.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/health",
+      "dest": "api/server.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/(.*\\.(js|css|html|png|jpg|jpeg|gif|svg|ico))",
+      "dest": "public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "public/index.html"
+    }
+  ],
+  "env": {
+    "DISCORD_WEBHOOK_URL": "@discord-webhook-url"
+  }
+}

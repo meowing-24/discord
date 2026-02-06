@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord File Uploader - Preview</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #202225 0%, #36393f 100%);
+            color: white;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #5865f2;
+        }
+        .preview {
+            background: #2f3136;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature {
+            background: #202225;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid #5865f2;
+        }
+        .feature h3 {
+            margin-top: 0;
+            color: #5865f2;
+        }
+        .feature p {
+            color: #b9bbbe;
+            line-height: 1.6;
+        }
+        .screenshot {
+            background: #36393f;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        code {
+            background: #202225;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            color: #5865f2;
+        }
+        .tech-stack {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .tech-badge {
+            background: #5865f2;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        .warning {
+            background: rgba(237, 66, 69, 0.1);
+            border: 1px solid #ed4245;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .success {
+            background: rgba(59, 165, 93, 0.1);
+            border: 1px solid #3ba55d;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        ul {
+            color: #b9bbbe;
+            line-height: 1.8;
+        }
+        a {
+            color: #5865f2;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📁 Discord File Uploader - Project Overview</h1>
+        
+        <div class="preview">
+            <h2>What You've Built</h2>
+            <p>A modern, secure web application that allows users to upload files directly to Discord through webhooks. Perfect for file sharing, team collaboration, or building Discord-integrated tools.</p>
+            
+            <div class="tech-stack">
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Express</span>
+                <span class="tech-badge">Vanilla JavaScript</span>
+                <span class="tech-badge">Modern CSS</span>
+                <span class="tech-badge">Discord API</span>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h2>✨ Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>🎨 Modern UI</h3>
+                    <p>Clean, Discord-inspired dark theme with smooth animations and intuitive design</p>
+                </div>
+                <div class="feature">
+                    <h3>🔒 Secure</h3>
+                    <p>Webhook URLs stored server-side only, never exposed to clients. Full environment variable support.</p>
+                </div>
+                <div class="feature">
+                    <h3>📱 Drag & Drop</h3>
+                    <p>Intuitive file upload with drag-and-drop support plus traditional file browsing</p>
+                </div>
+                <div class="feature">
+                    <h3>✅ Validation</h3>
+                    <p>Client and server-side file validation with size limits and error handling</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Real-time Feedback</h3>
+                    <p>Loading states, progress indicators, and success/error messages</p>
+                </div>
+                <div class="feature">
+                    <h3>🚀 Deploy Ready</h3>
+                    <p>Configured for Vercel, Heroku, Railway, and other platforms</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h2>📂 Project Structure</h2>
+            <pre style="background: #202225; padding: 15px; border-radius: 8px; overflow-x: auto;"><code>discord-file-uploader/
+├── api/
+│   └── server.js          # Backend Express server
+├── public/
+│   ├── index.html         # Main frontend
+│   ├── styles.css         # Dark theme styling
+│   └── script.js          # Upload logic
+├── .env.example           # Environment template
+├── .gitignore             # Security protection
+├── package.json           # Dependencies
+├── vercel.json            # Deployment config
+├── README.md              # Full documentation
+└── SETUP.md               # Quick start guide</code></pre>
+        </div>
+
+        <div class="preview">
+            <h2>🚀 Quick Start</h2>
+            <ol style="color: #b9bbbe; line-height: 1.8;">
+                <li>Run <code>npm install</code> to install dependencies</li>
+                <li>Get your Discord webhook URL from channel settings</li>
+                <li>Copy <code>.env.example</code> to <code>.env</code> and add your webhook</li>
+                <li>Run <code>npm start</code> to start the server</li>
+                <li>Open <code>http://localhost:3000</code> in your browser</li>
+                <li>Upload files and see them appear in Discord! 🎉</li>
+            </ol>
+        </div>
+
+        <div class="preview">
+            <h2>🔐 Security Best Practices Implemented</h2>
+            <ul>
+                <li>✅ Webhook URL stored only in server-side environment variables</li>
+                <li>✅ Never exposed to frontend code or client requests</li>
+                <li>✅ File size validation on both client and server</li>
+                <li>✅ Error messages don't leak sensitive server information</li>
+                <li>✅ <code>.gitignore</code> prevents committing secrets</li>
+                <li>✅ Input sanitization and validation</li>
+                <li>✅ Temporary file storage (memory only, not disk)</li>
+            </ul>
+        </div>
+
+        <div class="preview">
+            <h2>🌐 Deployment Options</h2>
+            <p>Your project is ready to deploy to:</p>
+            <ul>
+                <li><strong>Vercel</strong> (Recommended) - Free tier, instant deployment with <code>vercel.json</code> included</li>
+                <li><strong>Heroku</strong> - Classic Node.js hosting</li>
+                <li><strong>Railway</strong> - Modern platform with great free tier</li>
+                <li><strong>Render</strong> - Easy deployment with free SSL</li>
+                <li><strong>Any Node.js host</strong> - Works anywhere Node.js runs!</li>
+            </ul>
+            <p>Just add your <code>DISCORD_WEBHOOK_URL</code> as an environment variable on your hosting platform.</p>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Important Security Reminders</h3>
+            <ul>
+                <li>Never commit your <code>.env</code> file to version control</li>
+                <li>Keep your Discord webhook URL private</li>
+                <li>Anyone with the webhook can post to your Discord channel</li>
+                <li>Discord has rate limits (~5 requests per 2 seconds)</li>
+            </ul>
+        </div>
+
+        <div class="success">
+            <h3>✨ What Makes This Special</h3>
+            <ul>
+                <li><strong>Production-ready code</strong> with proper error handling</li>
+                <li><strong>Clean, commented code</strong> for easy understanding</li>
+                <li><strong>Modern best practices</strong> throughout the stack</li>
+                <li><strong>Fully responsive</strong> works on mobile and desktop</li>
+                <li><strong>Zero frameworks</strong> for the frontend (pure HTML/CSS/JS)</li>
+                <li><strong>Professional UI/UX</strong> that users will love</li>
+            </ul>
+        </div>
+
+        <div class="preview">
+            <h2>📚 Files Included</h2>
+            <ul>
+                <li><code>api/server.js</code> - Full-featured Express backend with Discord integration</li>
+                <li><code>public/index.html</code> - Clean, semantic HTML structure</li>
+                <li><code>public/styles.css</code> - Modern CSS with dark theme</li>
+                <li><code>public/script.js</code> - Frontend logic with drag-and-drop</li>
+                <li><code>package.json</code> - All dependencies configured</li>
+                <li><code>vercel.json</code> - Ready for Vercel deployment</li>
+                <li><code>.env.example</code> - Template for configuration</li>
+                <li><code>.gitignore</code> - Protects sensitive files</li>
+                <li><code>README.md</code> - Comprehensive documentation</li>
+                <li><code>SETUP.md</code> - Quick setup guide</li>
+            </ul>
+        </div>
+
+        <div class="preview">
+            <h2>🎯 Next Steps</h2>
+            <ol style="color: #b9bbbe; line-height: 1.8;">
+                <li>Read through <code>SETUP.md</code> for the quick start guide</li>
+                <li>Check <code>README.md</code> for detailed documentation</li>
+                <li>Customize the colors and branding to match your needs</li>
+                <li>Deploy to your favorite hosting platform</li>
+                <li>Share with your team or community!</li>
+            </ol>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; color: #72767d;">
+            <p>Made with ❤️ for the Discord community</p>
+            <p style="font-size: 0.9em;">Ready to upload files? Get started with <code>npm install</code>!</p>
+        </div>
+    </div>
+</body>
+</html>
